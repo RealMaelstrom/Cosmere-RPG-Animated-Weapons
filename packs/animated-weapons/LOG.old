@@ -1,0 +1,8 @@
+2025/08/25-11:48:39.419 4dac Recovering log #44
+2025/08/25-11:48:39.421 4dac Delete type=0 #44
+2025/08/25-11:48:39.421 4dac Delete type=3 #42
+2025/08/25-11:52:19.468 48e8 Level-0 table #49: started
+2025/08/25-11:52:19.468 48e8 Level-0 table #49: 0 bytes OK
+2025/08/25-11:52:19.469 48e8 Delete type=0 #47
+2025/08/25-11:52:19.471 48e8 Manual compaction at level-0 from '!folders!4H9VQhin9BB78Fw4' @ 72057594037927935 : 1 .. '!items!zyDACVYDa0N9N31r' @ 0 : 0; will stop at (end)
+2025/08/25-11:52:19.471 48e8 Manual compaction at level-1 from '!folders!4H9VQhin9BB78Fw4' @ 72057594037927935 : 1 .. '!items!zyDACVYDa0N9N31r' @ 0 : 0; will stop at (end)
