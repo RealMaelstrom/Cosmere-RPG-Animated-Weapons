@@ -1,0 +1,125 @@
+{
+    "_id": "ex4dg2bXFpC5HTv6",
+    "folder": "4H9VQhin9BB78Fw4",
+    "name": "Longspear",
+    "type": "weapon",
+    "img": "https://assets.forge-vtt.com/63cd73f2d60c7c020f373513/modules/cosmere-rpg-stormlight-handbook/assets/icons/items/foundry_items/ICON_longspear.webp",
+    "system": {
+        "id": "longspear",
+        "type": "heavy_wpn",
+        "description": {
+            "value": "<p><strong>Damage</strong> 1d8 keen; <strong>Range</strong> Melee [+5]; <strong>Traits</strong> Two-Handed; <strong>Expert Traits</strong> Defensive;</p><p><strong>Type</strong> Heavy Weapon; <strong>Weapons Skill</strong> Heavy; <strong>Price</strong> 15 mk; <strong>Weight</strong> 9 lb.;</p>",
+            "chat": "",
+            "short": ""
+        },
+        "activation": {
+            "type": "skill_test",
+            "skill": "hwp",
+            "cost": {
+                "value": 1,
+                "type": "act"
+            },
+            "attribute": "str",
+            "modifierFormula": "",
+            "consume": [],
+            "flavor": "",
+            "plotDie": false,
+            "opportunity": null,
+            "complication": null,
+            "uses": null
+        },
+        "damage": {
+            "formula": "1d8",
+            "type": "keen",
+            "skill": "hwp",
+            "attribute": null
+        },
+        "attack": {
+            "type": "melee",
+            "range": {
+                "value": 5,
+                "unit": "ft",
+                "long": null
+            }
+        },
+        "traits": {
+            "two_handed": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "reach": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "defensive": {
+                "defaultActive": false,
+                "expertise": {
+                    "toggleActive": true,
+                    "value": null
+                },
+                "defaultValue": null,
+                "value": null,
+                "active": false
+            }
+        },
+        "equipped": false,
+        "alwaysEquipped": false,
+        "expertise": false,
+        "weight": {
+            "value": 9,
+            "unit": "lb"
+        },
+        "price": {
+            "value": 15,
+            "currency": "spheres",
+            "denomination": {
+                "primary": "mark",
+                "secondary": "none"
+            },
+            "unit": "spheres.mark"
+        },
+        "equip": {
+            "type": "hold",
+            "hold": "two_handed"
+        },
+        "quantity": 1,
+        "events": {
+            "IKolSBXKS83mYblr": {
+                "id": "IKolSBXKS83mYblr",
+                "description": "Longspear Animation",
+                "event": "use",
+                "handler": {
+                    "type": "execute-macro",
+                    "inline": false,
+                    "uuid": "Compendium.cosmere-rpg-animated-weapons.weapon-animation-macros.Macro.jjrKVY1GrKvHvTmJ",
+                    "macro": {
+                        "type": "chat",
+                        "command": ""
+                    }
+                },
+                "order": 0
+            }
+        },
+        "linkedSkills": [],
+        "relationships": {}
+    },
+    "effects": [],
+    "sort": 1400000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_key": "!items!ex4dg2bXFpC5HTv6"
+}

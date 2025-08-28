@@ -1,0 +1,111 @@
+{
+    "_id": "IPtWs6caE80IDsUF",
+    "folder": "4H9VQhin9BB78Fw4",
+    "name": "Rapier",
+    "type": "weapon",
+    "img": "https://assets.forge-vtt.com/bazaar/core/icons/weapons/swords/sword-hooked.webp",
+    "system": {
+        "id": "rapier",
+        "type": "light_wpn",
+        "description": {
+            "value": "<p><strong>Damage</strong> 1d6 keen; <strong>Range</strong> Melee; <strong>Traits</strong> Quickdraw; <strong>Expert Traits</strong> Defensive;</p><p><strong>Type</strong> Light Weapon; <strong>Weapons Skill</strong> Light; <strong>Price</strong> 100 mk; <strong>Weight</strong> 2 lb.;</p>",
+            "chat": "",
+            "short": ""
+        },
+        "equipped": false,
+        "activation": {
+            "cost": {
+                "value": 1,
+                "type": "act"
+            },
+            "type": "skill_test",
+            "skill": "lwp",
+            "attribute": "spd",
+            "modifierFormula": "",
+            "consume": [],
+            "flavor": "",
+            "plotDie": false,
+            "opportunity": null,
+            "complication": null,
+            "uses": null
+        },
+        "damage": {
+            "skill": "lwp",
+            "formula": "1d6",
+            "type": "keen",
+            "attribute": null
+        },
+        "traits": {
+            "quickdraw": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "defensive": {
+                "defaultActive": false,
+                "expertise": {
+                    "toggleActive": true,
+                    "value": null
+                },
+                "defaultValue": null,
+                "value": null,
+                "active": false
+            }
+        },
+        "weight": {
+            "value": 2,
+            "unit": "lb"
+        },
+        "price": {
+            "value": 100,
+            "currency": "spheres",
+            "denomination": {
+                "primary": "mark",
+                "secondary": "none"
+            },
+            "unit": "spheres.mark"
+        },
+        "expertise": false,
+        "attack": {
+            "type": "melee",
+            "range": null
+        },
+        "alwaysEquipped": false,
+        "equip": {
+            "type": "hold",
+            "hold": "one_handed"
+        },
+        "quantity": 1,
+        "events": {
+            "fXXMeYHYNQVPoGdf": {
+                "id": "fXXMeYHYNQVPoGdf",
+                "description": "Rapier Animation",
+                "event": "use",
+                "handler": {
+                    "type": "execute-macro",
+                    "inline": false,
+                    "uuid": "Compendium.cosmere-rpg-animated-weapons.weapon-animation-macros.Macro.qQfPdIB05PBUwxEu",
+                    "macro": {
+                        "type": "chat",
+                        "command": ""
+                    }
+                },
+                "order": 0
+            }
+        },
+        "linkedSkills": [],
+        "relationships": {}
+    },
+    "effects": [],
+    "sort": 700000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_key": "!items!IPtWs6caE80IDsUF"
+}

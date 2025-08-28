@@ -1,0 +1,16 @@
+{
+    "name": "Sidesword",
+    "type": "script",
+    "command": "let target = Array.from(game.user.targets) [0];\n\nnew Sequence()\n\n.effect()\n.file(\"jb2a.shortsword.melee.01.white.5\")\n.scale(1.3)\n.atLocation(token)\n.stretchTo(target)\n.duration(2867)\n\n.play()",
+    "img": "https://assets.forge-vtt.com/63cd73f2d60c7c020f373513/modules/cosmere-rpg-stormlight-handbook/assets/icons/items/foundry_items/ICON_Shortsword.webp",
+    "author": "Up4RIl7sKYgmCW6U",
+    "scope": "global",
+    "folder": "OpE4weFC9hXMsTvw",
+    "sort": 125000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_id": "VgJ8WfNVANuOSZ3Z",
+    "_key": "!macros!VgJ8WfNVANuOSZ3Z"
+}

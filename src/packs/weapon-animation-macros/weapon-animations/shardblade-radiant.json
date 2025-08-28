@@ -1,0 +1,16 @@
+{
+    "name": "Shardblade (Radiant)",
+    "type": "script",
+    "command": "let target = Array.from(game.user.targets) [0];\n\nnew Sequence()\n\n.effect()\n.file(\"jb2a.greatsword.melee.fire.blue\")\n.scale(1.8)\n.atLocation(token)\n.stretchTo(target)\n.duration(2033)\n\n.play()",
+    "img": "https://assets.forge-vtt.com/63cd73f2d60c7c020f373513/modules/cosmere-rpg-stormlight-handbook/assets/icons/items/foundry_items/ICON_Shardblade_radiant.webp",
+    "author": "Up4RIl7sKYgmCW6U",
+    "scope": "global",
+    "folder": "OpE4weFC9hXMsTvw",
+    "sort": 125000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_id": "XoHzlSP0j7b777H6",
+    "_key": "!macros!XoHzlSP0j7b777H6"
+}
