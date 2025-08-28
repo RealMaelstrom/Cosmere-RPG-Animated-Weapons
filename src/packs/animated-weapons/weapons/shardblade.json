@@ -1,0 +1,121 @@
+{
+    "_id": "UEeBGoROYJllLAx9",
+    "folder": "4H9VQhin9BB78Fw4",
+    "name": "Shardblade",
+    "type": "weapon",
+    "img": "https://assets.forge-vtt.com/63cd73f2d60c7c020f373513/modules/cosmere-rpg-stormlight-handbook/assets/icons/items/foundry_items/ICON_Shardblade.webp",
+    "system": {
+        "id": "shardblade",
+        "type": "special_wpn",
+        "description": {
+            "value": "<div><p><strong>Damage </strong>2d8 spirit; <strong>Range </strong>Melee; <strong>Traits </strong>Dangerous, Deadly, Unique; <strong>Expert Traits </strong>Unique: loses Dangerous trait;</p><p><strong>Type </strong>Special Weapon; <strong>Weapons Skill </strong>Heavy; <strong>Price </strong>Reward only; <strong>Weight </strong>4 lb.;</p><p>Shardblades are among the most priceless items on Roshar. These weapons are five to six feet long, at least a handspan wide, gleamingly ornate, and shockingly light. They can cut through nearly anything like a hot knife through chull lard, and their bonded owner can summon them from thin air.</p><p>Shardblades are composed of an unknown metal, with a gemstone fitted within their hilt or guard. Unlike non-Invested weaponry, Shardblades can cut cleanly through almost any non-living material including non-Invested stone and metal—with the ease of slicing through water. In addition, these Blades pass through living organisms without the usual mark or injury, slicing through soul rather than flesh and bone. When the core of a limb is “severed” by a Shardblade, everything beyond that cut becomes Blade-dead gray and lifeless. If this happens to a character’s spine or head, their eyes burn out and they instantly die.</p><h4>Bonding a Shardblade</h4><p>You can use a Shardblade’s attached gem to bond to that blade. This process usually takes about 5 days, though you can break this bond with only a few moments of concentration. Once you bond to a Shardblade, you can summon it anywhere by willing it to happen—ten heartbeats later, the blade coalesces from mist into your hand. If your bonded Shardblade leaves your hand, it instantly dissipates again unless you will it not to.</p><p>You can have multiple Shardblades bound at a time, but each Shardblade can be bound to only one character at a time. You can only bond another character’s Shard­blade if they are dead or willingly broke their bond.</p><h4>Unique Traits</h4><p>Shardblades add the following special traits:</p><p><strong>Summoning/Dismissing:</strong> Once bonded (see “Bonding a Shardblade”), a Shardblade takes ten heartbeats to summon. When you use the Interact action to draw your Shardblade, it doesn’t materialize in your hand until the start of your next turn. You can dismiss your Shardblade with a mere thought (no action required), then it disappears into mist until you need it again.</p><p></p><p><strong>Spiritual Injury.</strong> Shardblades are an Invested weapon that can sever a person’s spirit. When a Shardblade causes a target to make an injury roll (such as by reducing them to 0 health or triggering the weapon’s Deadly trait), determine the injury by rolling on the Shardblade Injury Duration table without adding the target’s deflect value (instead of rolling on the Injury Duration table in chapter 9).</p><p></p><h5>Shardblade Injuries</h5><table><thead><tr><th><p>Injury Roll</p></th><th><p>Injury</p></th></tr></thead><tbody><tr><td><p>16+</p></td><td><p><strong>Flesh Wound.</strong> The character suffers a temporaryinjury for the remainder of the day..</p></td></tr><tr><td><p>1–15</p></td><td><p><strong>Spiritual Injury.</strong>The target suffers a permanent injury. Any severed flesh turns gray and lifeless. No non-Invested healing can recover this injury.</p></td></tr><tr><td><p>0 or lower</p></td><td><p><strong>Death.</strong>The target dies. (see “Death”).</p></td></tr></tbody></table></div>",
+            "chat": "",
+            "short": ""
+        },
+        "equipped": false,
+        "activation": {
+            "cost": {
+                "value": 1,
+                "type": "act"
+            },
+            "type": "skill_test",
+            "skill": "hwp",
+            "attribute": "str",
+            "modifierFormula": "",
+            "consume": [],
+            "flavor": "",
+            "plotDie": false,
+            "opportunity": null,
+            "complication": null,
+            "uses": null
+        },
+        "damage": {
+            "skill": "hwp",
+            "formula": "2d8",
+            "type": "spirit",
+            "attribute": "str"
+        },
+        "traits": {
+            "dangerous": {
+                "defaultActive": true,
+                "expertise": {
+                    "toggleActive": true,
+                    "value": null
+                },
+                "defaultValue": null,
+                "value": null,
+                "active": true
+            },
+            "deadly": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "unique": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            }
+        },
+        "weight": {
+            "value": 4,
+            "unit": "lb"
+        },
+        "expertise": false,
+        "attack": {
+            "type": "melee",
+            "range": null
+        },
+        "alwaysEquipped": false,
+        "equip": {
+            "type": "hold",
+            "hold": "one_handed"
+        },
+        "quantity": 1,
+        "price": {
+            "unit": "none",
+            "value": null,
+            "currency": "none",
+            "denomination": {
+                "primary": "none",
+                "secondary": "none"
+            }
+        },
+        "events": {
+            "87AU9D3rZmpITJD3": {
+                "id": "87AU9D3rZmpITJD3",
+                "description": "Shardblade Animated",
+                "event": "use",
+                "handler": {
+                    "type": "execute-macro",
+                    "inline": false,
+                    "uuid": "Compendium.cosmere-rpg-animated-weapons.weapon-animation-macros.Macro.TI7vCyaWOFT0a0p4",
+                    "macro": {
+                        "type": "chat",
+                        "command": ""
+                    }
+                },
+                "order": 0
+            }
+        },
+        "linkedSkills": [],
+        "relationships": {}
+    },
+    "effects": [],
+    "sort": 1100000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_key": "!items!UEeBGoROYJllLAx9"
+}

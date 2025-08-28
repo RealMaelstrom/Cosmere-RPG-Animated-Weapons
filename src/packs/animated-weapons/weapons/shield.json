@@ -1,0 +1,111 @@
+{
+    "_id": "fV3Adif5imyAc5m5",
+    "folder": "4H9VQhin9BB78Fw4",
+    "name": "Shield",
+    "type": "weapon",
+    "img": "https://assets.forge-vtt.com/63cd73f2d60c7c020f373513/modules/cosmere-rpg-stormlight-handbook/assets/icons/items/foundry_items/ICON_Shield.webp",
+    "system": {
+        "id": "shield",
+        "type": "heavy_wpn",
+        "description": {
+            "value": "<p><strong>Damage</strong> 1d4 impact; <strong>Range</strong> Melee; <strong>Traits</strong> Defensive; <strong>Expert Traits</strong> Offhand;</p><p><strong>Type</strong> Heavy Weapon; <strong>Weapons Skill</strong> Heavy; <strong>Price</strong> 10 mk; <strong>Weight</strong> 2 lb.;</p>",
+            "chat": "",
+            "short": ""
+        },
+        "equipped": false,
+        "activation": {
+            "cost": {
+                "value": 1,
+                "type": "act"
+            },
+            "type": "skill_test",
+            "skill": "hwp",
+            "attribute": "str",
+            "modifierFormula": "",
+            "consume": [],
+            "flavor": "",
+            "plotDie": false,
+            "opportunity": null,
+            "complication": null,
+            "uses": null
+        },
+        "damage": {
+            "skill": "hwp",
+            "formula": "1d4",
+            "type": "impact",
+            "attribute": null
+        },
+        "traits": {
+            "defensive": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "offhand": {
+                "defaultActive": false,
+                "expertise": {
+                    "toggleActive": true,
+                    "value": null
+                },
+                "defaultValue": null,
+                "value": null,
+                "active": false
+            }
+        },
+        "weight": {
+            "value": 2,
+            "unit": "lb"
+        },
+        "price": {
+            "value": 10,
+            "currency": "spheres",
+            "denomination": {
+                "primary": "mark",
+                "secondary": "none"
+            },
+            "unit": "spheres.mark"
+        },
+        "expertise": false,
+        "attack": {
+            "type": "melee",
+            "range": null
+        },
+        "alwaysEquipped": false,
+        "equip": {
+            "type": "hold",
+            "hold": "one_handed"
+        },
+        "quantity": 1,
+        "events": {
+            "bpd1b2mP18HnrRV4": {
+                "id": "bpd1b2mP18HnrRV4",
+                "description": "Shield Animation",
+                "event": "use",
+                "handler": {
+                    "type": "execute-macro",
+                    "inline": false,
+                    "uuid": "Compendium.cosmere-rpg-animated-weapons.weapon-animation-macros.Macro.q26Iv8mnL2ucQlW6",
+                    "macro": {
+                        "type": "chat",
+                        "command": ""
+                    }
+                },
+                "order": 0
+            }
+        },
+        "linkedSkills": [],
+        "relationships": {}
+    },
+    "effects": [],
+    "sort": 1500000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_key": "!items!fV3Adif5imyAc5m5"
+}

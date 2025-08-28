@@ -1,0 +1,250 @@
+{
+    "folder": "4H9VQhin9BB78Fw4",
+    "name": "Warhammer",
+    "type": "weapon",
+    "_id": "XVwsNMHeDOaR9kkX",
+    "img": "https://assets.forge-vtt.com/bazaar/core/icons/weapons/hammers/hammer-double-steel.webp",
+    "system": {
+        "id": "warhammer",
+        "type": "heavy_wpn",
+        "description": {
+            "value": "<div><p><strong>Damage </strong>2d10 impact; <strong>Range </strong>Melee; <strong>Traits </strong>Cumbersome [5]wo-Handed; <strong>Expert Traits </strong>Unique;</p><p><strong>Type </strong>Special Weapon; <strong>Weapons Skill </strong>Heavy; <strong>Price </strong>400 mk; <strong>Weight </strong>150 lb.;</p><p></p><p>Rosharan warhammers have hafts as thick as a warrior’s wrist and a metal head nearly the size of a warrior’s torso. Due to their enormous weight, warhammers usually can usually only be wielded by people in Shardplate. Consequently, warhammers are commonly called Shardhammers, despite being made of mundane materials.</p></div><div><h4>Unique Traits</h4><p>If you have the Warhammer specialist expertise, add the following special expert trait:</p><p><strong>Crushing Weight</strong>. When you hit a character of your size or smaller with an attack using this weapon, you can also push them horizontally up to 10 feet. When you do, you can also spend<span style=\"font-family: 'gg mono', 'Source Code Pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace\"> </span><span class=\"cosmere-icon\" style=\"color:#98a4f5\" data-tooltip=\"Opportunity\" aria-label=\"Opportunity\">O</span><span style=\"font-family: 'gg mono', 'Source Code Pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace\"> </span>to choose any number of other characters of your size or smaller within your reach, pushing them the same direction and distance.<br><br></p></div>",
+            "chat": "",
+            "short": ""
+        },
+        "equipped": false,
+        "alwaysEquipped": false,
+        "equip": {
+            "type": "hold"
+        },
+        "activation": {
+            "type": "skill_test",
+            "cost": {
+                "value": 1,
+                "type": "act"
+            },
+            "consume": [],
+            "flavor": "",
+            "plotDie": false,
+            "opportunity": null,
+            "complication": null,
+            "uses": null,
+            "skill": "hwp",
+            "modifierFormula": "",
+            "attribute": "str"
+        },
+        "attack": {
+            "type": "melee",
+            "range": null
+        },
+        "damage": {
+            "formula": "2d10",
+            "type": "impact",
+            "skill": "hwp",
+            "attribute": "str"
+        },
+        "expertise": false,
+        "traits": {
+            "cumbersome": {
+                "defaultActive": true,
+                "defaultValue": 5,
+                "expertise": {
+                    "value": null,
+                    "toggleActive": false
+                },
+                "value": 5,
+                "active": true
+            },
+            "dangerous": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "deadly": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "defensive": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "discreet": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "indirect": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "loaded": {
+                "defaultActive": false,
+                "defaultValue": 0,
+                "value": 0,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "momentum": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "offhand": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "pierce": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "quickdraw": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "thrown": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "two_handed": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "unique": {
+                "defaultActive": true,
+                "defaultValue": null,
+                "value": null,
+                "active": true,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "fragile": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            },
+            "reach": {
+                "defaultActive": false,
+                "defaultValue": null,
+                "value": null,
+                "active": false,
+                "expertise": {
+                    "toggleActive": false,
+                    "value": null
+                }
+            }
+        },
+        "quantity": 1,
+        "weight": {
+            "value": 150,
+            "unit": "lb"
+        },
+        "price": {
+            "value": 400,
+            "currency": "spheres",
+            "denomination": {
+                "primary": "mark",
+                "secondary": "none"
+            },
+            "unit": "spheres.mark"
+        },
+        "events": {
+            "gNGr4boZtF9Otofk": {
+                "id": "gNGr4boZtF9Otofk",
+                "description": "Warhammer Animated",
+                "event": "use",
+                "handler": {
+                    "type": "execute-macro",
+                    "inline": false,
+                    "uuid": "Compendium.cosmere-rpg-animated-weapons.weapon-animation-macros.Macro.DMTFh2oX4UMox0xy",
+                    "macro": {
+                        "type": "chat",
+                        "command": ""
+                    }
+                },
+                "order": 0
+            }
+        },
+        "linkedSkills": [],
+        "relationships": {}
+    },
+    "effects": [],
+    "sort": 1300000,
+    "ownership": {
+        "default": 0
+    },
+    "flags": {},
+    "_key": "!items!XVwsNMHeDOaR9kkX"
+}
