@@ -6,6 +6,8 @@
 2. Run `npm install`.
 3. Find your Foundry 'Data' folder and copy it to your clipboard.
 4. Run `npm run link` and paste in the location.
+5. Run `npm run build:pack` after making any changes code-side.
+6. Run `npm run unpack` after making any compendium changes in Foundry.
 
 ## Commits and Pull Requests
 
