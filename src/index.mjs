@@ -1,67 +1,56 @@
-import { mappings as PremiumMappings } from "./premium-animations.mjs";
-import { mappings as FreeMappings } from "./free-animations.mjs";
+import { mappings as PremiumMappings } from "./mappings/premium-animations.mjs";
+import { mappings as FreeMappings } from "./mappings/free-animations.mjs";
+import { AnimationMacros } from "./macros";
+import { MODULE_ID, SETTINGS } from "./utils/constants";
 
-const Assets = Object.freeze({
-    None: Symbol("none"),
-    Free: Symbol("free"),
-    Premium: Symbol("premium"),
-});
+Hooks.once('init', async function () {
+	globalThis.cosmereAnimations = Object.assign(
+		{
+			macros: AnimationMacros,
+			mappings: {
+				free: FreeMappings,
+				premium: PremiumMappings,
+			},
+		}
+	);
 
-var assetState = Assets.None;
+	registerModuleSettings();
 
-Hooks.once('ready', () => {
-    if (game.modules.get('jb2a_patreon')?.active) {
-        assetState = Assets.Premium;
-    } else if (game.modules.get('JB2A_DnD5e')?.active) {
-        assetState = Assets.Free;
-    } else {
-        ui.notifications.error("No animation assets detected. Please install either JB2A Free or their Patreon pack!");
-    }
+	// Preload Handlebars templates.
+	//return preloadHandlebarsTemplates();
 });
 
 Hooks.on('createItem', (item, options, userId) => {
-    if (item.parent) {
-        switch (assetState) {
-            case Assets.Premium: {
-                assignAssets(item, PremiumMappings);
-                break;
-            }
-            case Assets.Free: {
-                assignAssets(item, FreeMappings);
-                break;
-            }
-        }
-    }
+	if (item.parent) {
+		addMacroEvent(item);
+	}
 });
 
-function assignAssets(item, mappings) {
-    const mapping = mappings[item.system.id];
-    if (!mapping) {
-        console.warn(`Unable to find mapping for ${item.system.id}.`);
-        return;
-    }
+function addMacroEvent(item) {
+	const mappings = game.settings.get(MODULE_ID, SETTINGS.AnimationMappings);
+	const mapping = mappings[item.system.id];
+	if (!mapping) {
+		console.warn(`Unable to find mapping for ${item.system.id}.`);
+		return;
+	}
 
-    var macro = "let target = Array.from(game.user.targets)[0];\n";
-    macro += "if (!target) {\n\t"
-    macro += "ui.notifications.error('Animation requires a target!');\n\treturn;\n}\n\n";
-    macro += "new Sequence().effect()\n\t";
-    macro += `.file("${mapping.file}")\n\t.scale(${mapping.scale})\n\t.atLocation(${mapping.location})\n\t`;
-    macro += `.stretchTo(${mapping.stretchTo})\n\t.duration(${mapping.duration})\n\t.play();`;
+	var macro = "// This macro will always call the most recent version of the code, do not modify or you risk breaking it.";
+	macro += `\n\ncosmereAnimations.macros.runAnimation(${item.system.id});`;
 
-    const events = item.system.events;
-    events[`${item.system.id}-animation-macro`] = {
-        "id": "AaPJGHg3XlkXrPde",
-        "description": `${item.name} Animation`,
-        "event": "use",
-        "handler": {
-            "type": "execute-macro",
-            "inline": true,
-            "macro": {
-                "type": "script",
-                "command": macro,
-            }
-        },
-    };
+	const events = item.system.events;
+	events[`${item.system.id}-animation-macro`] = {
+		"id": "AaPJGHg3XlkXrPde",
+		"description": `${item.name} Animation`,
+		"event": "use",
+		"handler": {
+			"type": "execute-macro",
+			"inline": true,
+			"macro": {
+				"type": "script",
+				"command": macro,
+			}
+		},
+	};
 
-    item.update({ 'system.events': events });
+	item.update({ 'system.events': events });
 }
