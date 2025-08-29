@@ -119,14 +119,6 @@ export const mappings = {
     duration: 1700,
   },
 
-  "shardblade (radiant)": {
-    file: "jb2a.melee_attack.03.magical_greatsword.01.orange.1",
-    scale: 1.8,
-    location: "token",
-    stretchTo: "target",
-    duration: 1567,
-  },
-
     "shield": {
     file: "jb2a.melee_attack.06.shield.01.0",
     scale: 1.5,
