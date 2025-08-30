@@ -30,11 +30,24 @@
 				"id": "socketlib",
 				"type": "module",
 				"compatibility": {}
+			},
+			{
+				"id": "cosmere-rpg",
+				"type": "system",
+				"compatibility": {
+					"minimum": "1.0.1",
+					"verified": "1.0.1"
+				}
 			}
 		],
 		"recommends": [
 			{
 				"id": "jb2a_patreon",
+				"type": "module",
+				"compatibility": {}
+			},
+			{
+				"id": "JB2A_DnD5e",
 				"type": "module",
 				"compatibility": {}
 			}
@@ -45,32 +58,6 @@
 		{
 			"name": "Maelstrom",
 			"discord": "real_maelstrom or Maelstrom#1975",
-			"flags": {}
-		}
-	],
-	"packs": [
-		{
-			"name": "animated-weapons",
-			"label": "Animated Weapons",
-			"path": "packs/animated-weapons",
-			"type": "Item",
-			"ownership": {
-				"PLAYER": "OBSERVER",
-				"ASSISTANT": "OWNER"
-			},
-			"system": "cosmere-rpg",
-			"flags": {}
-		},
-		{
-			"name": "weapon-animation-macros",
-			"label": "Weapon Animation Macros",
-			"path": "packs/weapon-animation-macros",
-			"type": "Macro",
-			"ownership": {
-				"PLAYER": "OBSERVER",
-				"ASSISTANT": "OWNER"
-			},
-			"system": "cosmere-rpg",
 			"flags": {}
 		}
 	]
