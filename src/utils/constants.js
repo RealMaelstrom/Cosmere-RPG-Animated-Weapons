@@ -13,14 +13,21 @@ export const MODULE_NAME = 'Cosmere RPG Animated Weapons';
  */
 export const SYSTEM_ID = 'cosmere-rpg';
 
+
+/**
+ * Psuedo enum for which JB2A assets are available.
+ */
 export const Assets = Object.freeze({
 	None: Symbol("none"),
 	Free: Symbol("free"),
 	Premium: Symbol("premium"),
 });
 
-
-export const SETTINGS = {
+/**
+ * Psuedo enum for settings ids.
+ */
+export const SETTINGS = Object.freeze({
 	AnimationMappings: "animationAssetMappings",
 	MappingSync: "mappingSync",
-}
+	SyncButton: "syncMappingButton",
+});
