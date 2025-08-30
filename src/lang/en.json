@@ -15,7 +15,9 @@
 			}
 		},
 		"notifications": {
-			"mappingSync": "Synchronizing mappings to newest version..."
+			"mappingSync": "Synchronizing mappings to newest version...",
+			"animationTargetError": "Animation requires a target!",
+			"noAnimationAssetsError": "No animation assets detected. Please install either JB2A Free or their Patreon pack!"
 		}
 	}
 }
