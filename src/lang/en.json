@@ -1,0 +1,23 @@
+{
+	"cosmere-animations": {
+		"settings": {
+			"animationAssetMappings": {
+				"name": "Asset Mappings",
+				"hint": "Determines the mappings for various assets to identifiers of individual Foundry system items."
+			},
+			"mappingSync": {
+				"name": "Mapping Sync",
+				"hint": "Indicates when the mappings were last synchronized."
+			},
+			"syncMappingButton": {
+				"name": "Sync Mappings",
+				"hint": "Synchronizes the animation mappings with any changes to the module."
+			}
+		},
+		"notifications": {
+			"mappingSync": "Synchronizing mappings to newest version...",
+			"animationTargetError": "Animation requires a target!",
+			"noAnimationAssetsError": "No animation assets detected. Please install either JB2A Free or their Patreon pack!"
+		}
+	}
+}

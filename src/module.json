@@ -1,69 +1,64 @@
 {
-    "id": "cosmere-rpg-animated-weapons",
-    "title": "Cosmere RPG Animated Weapons",
-    "version": "1.1.0",
-    "manifest": "https://github.com/RealMaelstrom/Cosmere-RPG-Animated-Weapons/releases/latest/download/module.json",
-    "download": "https://github.com/RealMaelstrom/Cosmere-RPG-Animated-Weapons/releases/download/1.0.0/module.zip",
-    "compatibility": {
-        "minimum": "12",
-        "verified": "12"
-    },
-    "esmodules": [
-        "index.js"
-    ],
-    "relationships": {
-        "requires": [
-            {
-                "id": "sequencer",
-                "type": "module",
-                "compatibility": {}
-            },
-            {
-                "id": "socketlib",
-                "type": "module",
-                "compatibility": {}
-            }
-        ],
-        "recommends": [
-            {
-                "id": "jb2a_patreon",
-                "type": "module",
-                "compatibility": {}
-            }
-        ]
-    },
-    "description": "Module containing compendium items that have animation macros tied to enable the use of animated weapon strikes. Uses the JB2A patreon animations for all currently available weapons in the Cosmere RPG.",
-    "authors": [
-        {
-            "name": "Maelstrom",
-            "discord": "real_maelstrom or Maelstrom#1975",
-            "flags": {}
-        }
-    ],
-    "packs": [
-        {
-            "name": "animated-weapons",
-            "label": "Animated Weapons",
-            "path": "packs/animated-weapons",
-            "type": "Item",
-            "ownership": {
-                "PLAYER": "OBSERVER",
-                "ASSISTANT": "OWNER"
-            },
-            "system": "cosmere-rpg",
-            "flags": {}
-        },
-        {
-            "name": "weapon-animation-macros",
-            "label": "Weapon Animation Macros",
-            "path": "packs/weapon-animation-macros",
-            "type": "Macro",
-            "ownership": {
-                "PLAYER": "OBSERVER",
-                "ASSISTANT": "OWNER"
-            },
-            "system": "cosmere-rpg",
-            "flags": {}
-        }
-    ]
+	"id": "cosmere-rpg-animated-weapons",
+	"title": "Cosmere RPG Animated Weapons",
+	"version": "1.1.0",
+	"manifest": "https://github.com/RealMaelstrom/Cosmere-RPG-Animated-Weapons/releases/latest/download/module.json",
+	"download": "https://github.com/RealMaelstrom/Cosmere-RPG-Animated-Weapons/releases/download/1.0.0/module.zip",
+	"compatibility": {
+		"minimum": "12",
+		"verified": "12"
+	},
+	"esmodules": [
+		"index.js"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json",
+			"flags": {}
+		}
+	],
+	"relationships": {
+		"requires": [
+			{
+				"id": "sequencer",
+				"type": "module",
+				"compatibility": {}
+			},
+			{
+				"id": "socketlib",
+				"type": "module",
+				"compatibility": {}
+			},
+			{
+				"id": "cosmere-rpg",
+				"type": "system",
+				"compatibility": {
+					"minimum": "1.0.1",
+					"verified": "1.0.1"
+				}
+			}
+		],
+		"recommends": [
+			{
+				"id": "jb2a_patreon",
+				"type": "module",
+				"compatibility": {}
+			},
+			{
+				"id": "JB2A_DnD5e",
+				"type": "module",
+				"compatibility": {}
+			}
+		]
+	},
+	"description": "Module containing compendium items that have animation macros tied to enable the use of animated weapon strikes. Uses the JB2A patreon animations for all currently available weapons in the Cosmere RPG.",
+	"authors": [
+		{
+			"name": "Maelstrom",
+			"discord": "real_maelstrom or Maelstrom#1975",
+			"flags": {}
+		}
+	]
 }
