@@ -1,12 +1,14 @@
 import { mappings as PremiumMappings } from "./mappings/premium-animations.mjs";
 import { mappings as FreeMappings } from "./mappings/free-animations.mjs";
 import { AnimationMacros } from "./macros";
+import { registerModuleSettings } from "./utils/settings";
+import { NeedsSynced } from "./utils/version-parsing";
 import { MODULE_ID, SETTINGS } from "./utils/constants";
 
-Hooks.once('init', async function () {
+Hooks.once('init', () => {
 	globalThis.cosmereAnimations = Object.assign(
 		{
-			macros: AnimationMacros,
+			utils: AnimationMacros,
 			mappings: {
 				free: FreeMappings,
 				premium: PremiumMappings,
@@ -20,37 +22,15 @@ Hooks.once('init', async function () {
 	//return preloadHandlebarsTemplates();
 });
 
-Hooks.on('createItem', (item, options, userId) => {
-	if (item.parent) {
-		addMacroEvent(item);
+Hooks.once('ready', () => {
+	if (NeedsSynced()) {
+		ui.notifications.info("cosmere-animations.notifications.mappingSync", { localize: true });
+		AnimationMacros.syncMapping();
 	}
 });
 
-function addMacroEvent(item) {
-	const mappings = game.settings.get(MODULE_ID, SETTINGS.AnimationMappings);
-	const mapping = mappings[item.system.id];
-	if (!mapping) {
-		console.warn(`Unable to find mapping for ${item.system.id}.`);
-		return;
+Hooks.on('cosmere-rpg.useItem', (item, rollConfig, _options) => {
+	if (item.parent) {
+		cosmereAnimations.utils.runAnimation(item.system.id, item.parent);
 	}
-
-	var macro = "// This macro will always call the most recent version of the code, do not modify or you risk breaking it.";
-	macro += `\n\ncosmereAnimations.macros.runAnimation(${item.system.id});`;
-
-	const events = item.system.events;
-	events[`${item.system.id}-animation-macro`] = {
-		"id": "AaPJGHg3XlkXrPde",
-		"description": `${item.name} Animation`,
-		"event": "use",
-		"handler": {
-			"type": "execute-macro",
-			"inline": true,
-			"macro": {
-				"type": "script",
-				"command": macro,
-			}
-		},
-	};
-
-	item.update({ 'system.events': events });
-}
+});
