@@ -1,3 +1,5 @@
+import { MODULE_ID, SETTINGS } from "../utils/constants";
+
 function SemanticVersioning(version) {
 	const splitVersion = version.split(".");
 	if (splitVersion.length < 3) {
