@@ -20,7 +20,7 @@
         "@foundryvtt/foundryvtt-cli": "^1.0.3",
         "@rollup/plugin-commonjs": "^26.0.1",
         "@rollup/plugin-json": "^6.1.0",
-        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-node-resolve": "^15.3.1",
         "@rollup/plugin-replace": "^5.0.7",
         "archiver": "^7.0.1",
         "prompts": "^2.4.2",
